@@ -7,6 +7,13 @@ function App() {
   const intervalRef = useRef(null);
 
   const handleStart = () => {
+    if (Date.now == 10){
+      this.url="https://commondatastorage.googleapis.com/codeskulptor-assets/jump.ogg";
+      this.audio = new Audio(this.url);
+      console.log(this.audio);
+      this.audio.play();
+      
+    }
     setTime(Date.now());
     setNow(Date.now());
     intervalRef.current = setInterval(() => {
